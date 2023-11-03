@@ -1,0 +1,25 @@
+<!-- <div class="container-fluid">
+    <h2>Event Handling...</h2>
+    <button (click)="InsertClick($event,'Record Inserted....')" id="btnInsert" name="InsertButton"  class="btn btn-primary" >Insert</button>
+
+</div> -->
+
+<div class="container-fluid" (mousemove)="MouseMove($event)">
+<h2>SHOES...</h2>
+<img src="" width="100" height="100">
+<div class="mt-2">
+    <div class="btn-group">
+        <button (mouseover)="SetColor('black')" name="black" class="text-white" style="background-color:black;">BLACK</button>
+        <button (mouseover)="SetColor('red')"  name="red" class="text-white" style="background-color:red;">RED</button>
+        <button (mouseover)="SetColor('white')"  name="white" class="text-black" style="background-color:white;">WHITE</button>
+
+    </div>
+
+    <div style="height: 1000px;">
+
+        <img src="assets/indian_flag.jpg"  [ngStyle]="styleObject" width="50" height="50" alt="">
+    </div>
+</div>
+
+
+<!-- All MOuseEvents    mouseover,mouseout,mousedown,mouseup,mousemove -->

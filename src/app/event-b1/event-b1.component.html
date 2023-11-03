@@ -1,0 +1,16 @@
+<div class="container-fluid">
+<h1>Register User</h1>
+
+    <dt>User Name:</dt>
+
+    <dd><input type="text" (blur)="VeifyRequired($event)" (keyup)="VerifyUser($event)"></dd>
+    <dd [ngClass]="{'text-danger':isInValid, 'text-success':true}">{{UserError}}</dd>
+    <dt>Password:</dt>
+    <dd><input type="password" (focus)="PwdErrOrFocus()" (blur)="PwdBlur" (keypress)="VerifyPassword($event)"></dd>
+    <dd class="text-warning" *ngIf="ispwdWarningVisible">
+        <span class="bi bi-exclamation-triangle-fill"></span> Caps-ON
+    </dd>
+
+    <dd>{{passError}}</dd>
+
+</div>

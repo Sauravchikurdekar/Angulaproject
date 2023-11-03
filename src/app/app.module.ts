@@ -6,6 +6,12 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { ForDemoComponent } from './for-demo/for-demo.component';
 import { SecondComponent } from './second/second.component';
 import { MarsComponent } from './mars/mars.component';
+import { PlanetaryComponent } from './planetary/planetary.component';
+import { EventBindingComponent } from './event-binding/event-binding.component';
+import { EventB1Component } from './event-b1/event-b1.component';
+import { EmiComponent } from './emi/emi.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 
 @NgModule({
@@ -15,12 +21,18 @@ import { MarsComponent } from './mars/mars.component';
     ForDemoComponent,
     SecondComponent,
     MarsComponent,
+    PlanetaryComponent,
+    EventBindingComponent,
+    EventB1Component,
+    EmiComponent,
+    ParentComponent,
+    ChildComponent,
     
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [MarsComponent,]
+  bootstrap: [ParentComponent,]
 })
 export class AppModule { }
