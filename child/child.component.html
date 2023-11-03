@@ -1,0 +1,15 @@
+<div class="container-fliud bg mt-4 p-4" style="background-color: cornflowerblue; height: 200px;">
+    <h2 class="text-center">child container <button class="btn btn-warning " (click)="ChildButtonClick()">Msg to parent</button></h2>
+    <p>{{MsgFromPrent}}</p>
+
+</div>
+
+
+<!-- not reverse process we can do for inserting data to parent for that we can use a eventemiter it forcfullu thorow the value 
+out side the zone and parents can  catch and insert -->
+
+<!-- child comp use costom event to emit value
+<app-child (childclick)="GetMessageFromChild($event)
+
+parentd component have to collect the event arguments and use in its context"
+-->

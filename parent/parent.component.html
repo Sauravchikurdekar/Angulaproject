@@ -1,0 +1,8 @@
+<div class="container-fliud p-4 mt-4" style="background-color: bisque; height: 360px;">
+    <h2>parent class div <button class="btn btn-primary" (click)="SendClick()">Send MSG to child</button> </h2>
+    <p>{{MsgFromChild}}</p>
+     <app-child [MsgFromPrent]="msg" (ChildClick)="GetMsgFromChild($event)" ></app-child>
+
+</div>
+
+<!-- propertys are bind in square brackets and events are bind in parenthecess -->
