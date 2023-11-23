@@ -1,0 +1,64 @@
+<div class="container fluid">
+    <h2>Product Details</h2>
+    <!-- <dl>
+        <dt>Name</dt>
+        <dd>{{product1.Name |titlecase}}</dd>
+        <dt>Price</dt>
+        <dd>{{product1.Price|currency:'INR'}}</dd>
+        <dt>Manufactured</dt>
+        <dd>{{product1.Mfd|date: 'dd-mmm-yyyy'}}</dd>
+        <dt>Interest Rate</dt>
+        <dd>{{product1.Rate|percent:'2.2'}}</dd>
+    </dl> -->
+
+    <!-- //for json -->
+    <!-- <pre>
+        {{product1 |json}}
+    </pre> -->
+
+    <!-- //slice -->
+    
+    <!-- <ol class="list-unstyled"> -->
+        <!-- <li *ngFor="let item of categoires | slice:2:4">
+            {{item}} -->
+            <!-- <li *ngFor="let item of categoires | keyvalue">
+                {{item.key}} -{{item.value}};
+            
+
+
+        </li>
+    </ol> -->
+
+
+
+    <!-- key value in angular in *ngFor of is "of operator can't read property,it can read only value" -->
+
+
+
+<!-- //i19nselect -->
+
+<table class="table table-hover">
+
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>DeliverdTo</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let product1 of Product2">
+            <td>{{product1.Name}}</td>
+            <td>{{product1.ShippedTo}}</td>
+            <td>
+                {{product1.ShippedTo|i18nSelect:Status}}
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+
+
+
+</div>

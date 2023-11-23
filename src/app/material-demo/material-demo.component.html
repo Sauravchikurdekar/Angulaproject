@@ -1,0 +1,27 @@
+<div class="container fluid">
+    <h2> Bootstrap Input</h2>
+
+    <div class="w-25">
+        <label class="form-lable">User name</label>
+        <div>
+            <input type="text" ngModel #UserName1="" class="form-input" placeholder="Enter Name">
+            <h2>helloo...!{{UserName1.value}}</h2>
+            <button class="btn btn-primary" style="height: 30px; margin-top: 10px;">submit</button>
+        </div>
+        
+    </div>
+
+    <h2>Material Input..</h2>
+    <mat-form-field  appearance = "fill">
+
+        <mat-label>User Name</mat-label>
+        <input type="text" ngModel #UserName="" matInput placeholder="Enter Name" > 
+        
+    </mat-form-field>
+    <h2> Hello..! {{UserName.value}}</h2>
+   <div>
+    <button mat-fab >submit</button>
+   </div>
+   
+
+ </div>
