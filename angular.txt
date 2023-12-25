@@ -1,0 +1,118 @@
+1. What is Angular?
+Answer: Angular is a popular open-source front-end web application
+ framework developed and maintained by Google. It is used for building dynamic, single-page web applications (SPAs).
+
+2. What are the key features of Angular?
+Answer:
+
+Modularity: Angular applications are modular and organized into various modules.
+Component-based Architecture: Angular uses components to build the user interface.
+Dependency Injection: Angular has a built-in dependency injection system to manage object creation and provide components with services.
+Directives: Angular allows you to create custom HTML tags (directives) for better reusability.
+Templates and Data Binding: Angular offers two-way data binding and templates for building dynamic views.
+Services: Angular services are singleton objects used for encapsulating and sharing data and behavior across components.
+Routing: Angular provides a powerful router for building single-page applications.
+3. What is TypeScript?
+Answer: TypeScript is a superset of JavaScript developed by Microsoft. It adds static types to the language,
+ making it easier to maintain and scale large applications. Angular is built using TypeScript.
+
+4. What is data binding in Angular?
+Answer: Data binding in Angular refers to the synchronization between the model (data) and the view (UI). There are four types of data binding in Angular:
+
+Interpolation: {{ data }}
+Property Binding: [property]="data"
+Event Binding: (event)="handler()"
+Two-way Binding: [(ngModel)]="data"
+5. What is Angular CLI?
+Answer: Angular CLI (Command Line Interface) is a powerful tool for initializing, developing, scaffolding,
+ and maintaining Angular applications. It automates common development tasks and provides a consistent development environment.
+
+6. Explain Angular Modules.
+Answer: Angular Modules are containers for a group of related components, directives, services, and pipes. They help
+ in organizing the application into cohesive blocks of functionality. Every Angular application has at least one module, known as the root module (AppModule).
+
+7. What is Dependency Injection in Angular?
+Answer: Dependency Injection (DI) is a design pattern in Angular where components and services are given their dependencies 
+instead of creating them internally. It helps in managing and organizing the objects that a class needs to perform its functions.
+
+8. What are Angular Services?
+Answer: Angular services are singleton objects that are used to organize and share business logic, data, or functions
+ across an Angular application. They are injectable and can be injected into components and other services.
+
+9. Explain Observables in Angular.
+Answer: Observables are a powerful way to manage asynchronous data streams. They are used extensively in Angular for handling events,
+ asynchronous requests, and handling multiple values over time. Observables can be used with Angular's HttpClient for making HTTP requests.
+
+10. What is Angular Routing?
+
+Answer: Angular Routing is a mechanism that allows navigation between different components based on the URL changes. 
+It helps in building Single Page Applications (SPAs) by dynamically loading different components based on the route requested by the user.
+
+Remember, it's essential to not only know the answers but also understand the concepts behind these questions to succeed in an Angular interview. Good luck!
+
+
+
+
+Basic Angular Interview Questions:
+What is Angular?
+
+Angular is a popular open-source front-end web application framework developed by Google and a community 
+of developers. It's used for building dynamic, single-page web applications (SPAs).
+What is the difference between AngularJS and Angular?
+
+AngularJS is the first version of Angular, often referred to as Angular 1.x. Angular, commonly known as Angular
+ 2+, is a complete rewrite of AngularJS and has significant architectural changes.
+What are components in Angular?
+
+Components are the basic building blocks of an Angular application. They are directives with a template, data,
+ and behavior. They encapsulate the view, data, and logic of a component.
+What is data binding in Angular?
+
+Data binding in Angular allows synchronization between the model (component) and the view (DOM).
+ There are four types of data binding in Angular: Interpolation, Property binding, Event binding, and Two-way binding.
+Explain Angular Modules.
+
+Angular Modules (NgModules) are containers for a cohesive block of code dedicated to an application domain,
+ workflow, or a closely related set of capabilities. An Angular app is defined by a set of NgModules.
+Intermediate Angular Interview Questions:
+What is dependency injection in Angular?
+
+Dependency Injection (DI) is a design pattern in which a class receives its dependencies from external
+ sources rather than creating them itself. Angular has its own DI framework which provides services to the components.
+What are services in Angular?
+
+Services are objects that are used to organize and share business logic, data, or functions across an
+ Angular application. They can be injected into components or other services to provide functionality.
+What are directives in Angular?
+
+Directives are instructions in the DOM. In Angular, directives are used to create custom attributes for 
+elements or components. There are three types of directives: Component Directives, Structural Directives, and Attribute Directives.
+Explain Angular CLI.
+
+Angular CLI (Command Line Interface) is a powerful tool to initialize, develop, scaffold, and maintain
+ Angular applications. It allows developers to create components, services, modules, etc., with just a few commands.
+What is RxJS in Angular?
+
+RxJS is a library for reactive programming using Observables, making it easier to compose asynchronous or
+ callback-based code. It provides powerful operators for transforming, composing, and querying streams of data.
+Advanced Angular Interview Questions:
+What is Angular Universal?
+
+Angular Universal is a technology that allows server-side rendering of Angular applications. This
+ improves performance and facilitates web crawlers in indexing the Angular app.
+Explain lazy loading in Angular.
+
+Lazy loading is a technique in Angular where you can load feature modules only when the user navigates to their
+ routes. It helps in optimizing the initial loading time of the application.
+What is AOT compilation in Angular?
+
+AOT (Ahead-of-Time) compilation is a technique in Angular where the application is compiled at build time, converting
+ the Angular HTML and TypeScript code into efficient JavaScript code during the build process. It improves the performance of the application.
+What are Angular forms?
+
+Angular forms allow you to capture user input and validate it before sending it to the server. There are two types
+ of forms in Angular: Template-driven forms and Reactive forms (model-driven forms).
+Explain Angular Change Detection.
+
+Angular Change Detection is the mechanism used by Angular to keep the DOM in sync with the application data. Whenever 
+the application data changes, Angular automatically updates the view to reflect those changes.
