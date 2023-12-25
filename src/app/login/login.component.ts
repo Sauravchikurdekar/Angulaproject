@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CapchaService } from '../services/capcha.service';
 
 @Component({
@@ -6,14 +6,26 @@ import { CapchaService } from '../services/capcha.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements onInit {
+export class LoginComponent implements OnInit {
 
-  public code:string=''
+  public code:string='';
   capcha: any;
-  constructor(capcha:CapchaService){
+  constructor( capcha:CapchaService){
 
   }
-  ngonInit():void{
+  ngOnInit(): void {
     this.code=this.capcha.GenerateCode();
   }
+  public NewCode():void{
+    this.code=this.capcha.GenerateCode();
+
+    console.log(`data inserted..`);
+
+  }
+  public msg(){
+    
+    alert(`data inserted..`);
+   
+  }
+
 }

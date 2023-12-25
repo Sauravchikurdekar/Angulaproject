@@ -3,10 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
-// import { FormsModule } from '@angular/forms';
+import{HttpClientModule} from '@angular/common/http';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 
-// import { FormModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
@@ -27,9 +27,13 @@ import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 import { PipeDemo2Component } from './pipe-demo2/pipe-demo2.component';
 import { SentencePipe } from './pipes/SentencePipe';
 import { SortingPipe } from './pipes/sorting.pipe';
-import { FormsModule } from '@angular/forms';
+// import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { CapchaService } from './services/capcha.service';
+import { ServiceDemoComponent } from './service-demo/service-demo.component';
+import { TempleteFormComponent } from './templete-form/templete-form.component';
+import { TempleteForm2Component } from './templete-form2/templete-form2.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 
 @NgModule({
@@ -52,21 +56,26 @@ import { CapchaService } from './services/capcha.service';
     PipeDemo2Component,
     SentencePipe,
     LoginComponent,
+    ServiceDemoComponent,
+    TempleteFormComponent,
+    TempleteForm2Component,
+    ReactiveFormComponent,
     
     // SortingPipe
     
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-   
+    FormsModule, 
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    HttpClientModule,
+    ReactiveFormsModule
     
   ],
   providers: [CapchaService],
-  bootstrap: [ LoginComponent,]
+  bootstrap: [ ReactiveFormComponent,]
 })
 export class AppModule { }

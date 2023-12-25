@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <form class="mt-2" #frmregister="ngForm">
+        <h2>Register User</h2>
+        <dl>
+            <dt>User Name</dt>
+            <dd><input type="text" required minlength="4" name="UserName" ngModel #UserName="ngModel" name="UserName"></dd>
+            <dd class="text-danger" *ngIf="frmregister.submitted && UserName.invalid"></dd>
+      
+            <div *ngIf="UserName.errors?.['required']">User Name requied</div>
+            <div *ngIf="UserName.errors?.['minlength']">Name too short min 4 chars requied</div>
+            <div *ngIf="UserName.errors?.['maxlengh']">User name too long max 10 char requied</div>
+      
+
+        <dt>Password</dt>
+        <dd><input type="password" ngModel #Password="ngModel"required pattern="(?=.*[A-z]\w{4,10})"></dd>
+        <dd class="text-danger" *ngIf="(frmregister.submitted && Password.invalid) ||(Password.touched && Password.invalid)">
+        <div *ngIf="Password.errors?.['required']">Password requied</div>
+        <div *ngIf="Password.errors?.['pattern']">password 4 to 15 character</div>
+        </dd>
+
+        <dt>Mobile</dt>
+        <dd><input type="text" required pattern="\+91\d{10}" ngModel #mobile="ngModel"> </dd>
+        
+        <dd class="text-danger" *ngIf="frmregister.submitted && mobile.invalid    ">
+            <div *ngIf="mobile.errors?.['required']">Mobile number requied</div>
+            <div *ngIf="mobile.errors?.['pattern']">Invalid Mobile number +91 and 10 digit ewquied..</div>
+        </dd>
+<dd>
+    <select (change)="citychanged($event)" ngModel #city="ngModel" name="city">
+        <option value="-1">select the city</option>
+        <option value="pune" >Pune</option>
+        <option value="mumbai">Mumbai</option>
+    </select>
+</dd>
+<dd class="text-danger">
+    {{cityError}}
+
+</dd>
+</dl>
+
+        <button class="btn btn-primary">Register</button>
+
+    </form>
+
+</div>
