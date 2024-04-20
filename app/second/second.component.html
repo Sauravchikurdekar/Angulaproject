@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="mt-4">
+       <div class="mb-2">
+        <button (click)="UpdateClick()" class="btn btn-primary" >Update</button>
+
+       </div>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of probs; trackby:Trackchange">  <!--trackby method show the lazy loading to avoid necessary memory-->
+                    <th>{{item.Name}}</th>
+                    <th>{{item.Price}}</th>
+
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>

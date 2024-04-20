@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="mt-4">
+<table class="table table-hover">
+
+    <div class="l"  *ngFor="let item of planetaryobj">
+
+    <tbody>
+        <dl>
+            <dt>Data</dt>
+            <dd>{{item.data}}</dd>
+            <dt>explanation</dt>
+            <dd>{{item.explanation}}</dd>
+            <dt>hdurl</dt>
+            <dd><img [src]="item.hdurl" width="150" height="150"></dd>
+
+            <img src="item.image" alt="">
+        </dl>
+       
+    </tbody>
+
+</div>
+
+</table>
+    </div>
+
+</div>

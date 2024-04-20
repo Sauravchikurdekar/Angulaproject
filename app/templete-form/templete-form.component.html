@@ -1,0 +1,70 @@
+
+
+<!-- // name="fullname" ngModel #fullname="ngModel"    {{fullname.value}}
+// [(ngMoel)]="k"   {{k.value}} -->
+
+
+<div class="container-fluid">
+    <form #frmRegister="ngForm" class="p-2" [ngClass]="{'valid-style':frmRegister.valid,'invalid-style':frmRegister.invalid}" (submit)="SubmitClick(frmRegister.value)">
+    <h2>Register User</h2>
+    <dl>
+        <dt>User Name</dt>
+        <dd><input type="text"  required minlength="4" required maxlength="10" placeholder="Enter user name"  name="UserName" ngModel #UserName="ngModel"></dd>
+        <dt>Age</dt>
+        <dd><input type="text" placeholder="Enter Age"  required name="Age"  ngModel #Age="ngModel"></dd>
+        <dt>City</dt>
+        <dd>
+            <select name="City" placeholder="select city"  ngModel #Cty="ngModel">
+                <option >Delhi</option>
+                <option >Mumbai</option>
+                <option >pune</option>
+                <option >kolkata</option>
+            </select>
+        </dd>
+        <dt>Mobail No </dt>
+        <dd><input type="number" name="mobailNo" pattern="[0-9]{10}" minlength="0" maxlength="10" placeholder="Plase enter only number"  ngModel #mob="ngModel" ></dd>
+    
+
+      <dt>Nick name</dt>
+      <dd><input type="text" name="Nick" id="nick" placeholder="enter your nick name" ngModel #nick="ngModel" ></dd>
+
+      <dt>pet name</dt>
+      <dd><input type="text" [(ngModel)]="k"></dd>
+
+    </dl>
+    <button class="btn btn-primary" [disabled]="frmRegister.invalid">Register</button>
+    <button class="btn btn-danger" *ngIf="frmRegister.dirty">save</button>
+
+
+
+</form>
+<hr>
+<dl>
+    <dt>User Name</dt>
+    <dd>{{UserName.value}}</dd>
+    <dt>Age</dt>
+    <dd>{{Age.value}}</dd>
+    <dt>City</dt>
+    <dd>{{Cty.value}}</dd>
+    <dt>Mobail Number</dt>
+    <dd>{{mob.value}}</dd>
+    <dt>Nick Name</dt>
+    <dd>{{nick.value}}</dd>
+    <dt>pet name</dt>
+    <dd>{{k.value}}</dd>
+</dl>
+<hr>
+<dl>
+pristne:{{frmRegister.pristine}}<br>
+Dirty:{{frmRegister.dirty}}<br>
+Valiid:{{frmRegister.valid}}<br>
+Invalid:{{frmRegister.invalid}}<br>
+Submitted:{{frmRegister.submitted}}
+</dl>
+
+
+</div>
+
+
+
+

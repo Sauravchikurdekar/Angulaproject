@@ -1,0 +1,48 @@
+<div class="container-fluid">
+<form class="m2"  #frmregister="ngForm" (submit)="submitClick(frmregister.value)" >
+
+    <h2>Plural Demo</h2>
+ <h2>{{title| sentence}}</h2>   custom pipe
+
+    <div class="mb-3 input-group w-25">
+        <input type="text" [(ngModel)]="Message" class="form-control"> <button (click)="SendClick()" class="bi bi-primary"> <span class="bi bi-send">Send</span> </button>
+
+    </div>
+    <button (click)="ShowClick()" class="btn btn-primary position-relative w-25   ">
+        <span class="bi bi-bell"></span> {{Messages.length | i18nPlural:NotificationMp}}
+        <span class="badge bg-dark position-absolute end-0 top-0 rounded rounded-circle">{{Count}}</span>
+
+    </button>
+
+    <div class="mt-4" *ngIf="ShowMsg">
+        <ul class="list-unstyled">
+            <h3>Your Massage</h3>
+            <li *ngFor="let item of Message">
+                {{item}}
+
+            </li>
+
+        </ul>
+
+    </div>
+
+<!-- <div>
+    <button  (click)="showmsg()"  type="submit" name="show" >Show</button>
+ <dl>
+    <dt>your msg</dt>
+    <dd>{{Message}}</dd>
+ </dl>
+</div> -->
+
+</form>
+</div>
+
+
+
+<div class="container-fluid">
+    <!-- <ol>
+        <li *ngFor="let item of cities |sorting:false ">{{item}}</li>
+    </ol> -->
+
+
+</div>

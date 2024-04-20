@@ -1,0 +1,20 @@
+<div class="container-fliud style=w-25">
+    <div class="login-form">
+        <form>
+            <h2><span class="bi bi-person-fill style=w-25"></span></h2>
+            <dl>
+                <dt>User Name</dt>
+                <dd><input type="text" class="form-control"></dd>
+                <dt>Password</dt>
+                <dd> <input type="password" class="form-control"></dd>
+                <dt>Verify Code <button class="btn" (click)="NewCode()"><span class="bi bi-arrow-clockwise"></span></button></dt>
+                <dd>{{code}}</dd>
+            </dl>
+            <button class="btn btn-primary" (click)="msg()">Login</button>
+            
+        
+        </form>
+
+    </div>
+
+</div>  
